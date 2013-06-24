@@ -8,6 +8,10 @@ package
 		[Embed(source = "../assets/mapCSV_Level1_Map.csv", mimeType = "application/octet-stream")] public var mapCSV:Class;
 		[Embed(source = "../assets/backdrop.png")] public var skyTilesPNG:Class;
 		[Embed(source = "../assets/tiles.png")] public var mapTilesPNG:Class;
+<<<<<<< HEAD
+=======
+		[Embed(source = "../assets/It'sALightRainButI'llCarryMyUmbrella.mp3")] public var sfxMusic:Class;
+>>>>>>> Added gliding and music.  Use Shift to glide.
 		
 		public var sky:FlxTilemap;
 		public var map:FlxTilemap;
@@ -35,6 +39,12 @@ package
 			
 			add(sky);
 			add(map);
+<<<<<<< HEAD
+=======
+			
+			//  Music
+			FlxG.playMusic(sfxMusic);
+>>>>>>> Added gliding and music.  Use Shift to glide.
 		}
 		
 	}

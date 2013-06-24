@@ -46,12 +46,32 @@ package
 			//	By default the sprite is facing to the right.
 			//	Changing this tells Flixel to flip the sprite frames to show the left-facing ones instead.
 			facing = FlxObject.RIGHT;
+<<<<<<< HEAD
 		}
 		
 		public function doAttack() {
 			
 		}
 		
+=======
+
+		}
+		
+		public function doAttack() :void {
+			
+		}
+		
+		public function glide() :void {
+			FlxControl.player1.setMovementSpeed(400, 0, 100, 50, 400, 0);
+			FlxControl.player1.setGravity(0, 50);
+		}
+		
+		public function noGlide() :void {
+			FlxControl.player1.setMovementSpeed(400, 0, 100, 200, 400, 0);
+			FlxControl.player1.setGravity(0, 400);
+		}
+		
+>>>>>>> Added gliding and music.  Use Shift to glide.
 	}
 
 }

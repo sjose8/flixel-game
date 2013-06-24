@@ -33,6 +33,10 @@ package
 			//	The camera will follow the player
 			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
 			
+<<<<<<< HEAD
+=======
+			
+>>>>>>> Added gliding and music.  Use Shift to glide.
 			/*FlxG.bgColor = 0xff63b8ff;
 			
 			player = new Player(32, 200);
@@ -58,6 +62,17 @@ package
 			if (FlxG.keys.SPACE)
 				player.doAttack();
 			
+<<<<<<< HEAD
+=======
+			if (FlxG.keys.justPressed("SHIFT")) {
+				player.glide();
+			}
+			
+			if (FlxG.keys.justReleased("SHIFT")) {
+				player.noGlide();
+			}
+			
+>>>>>>> Added gliding and music.  Use Shift to glide.
 			super.update();
 			
 			FlxG.collide(player, level);
