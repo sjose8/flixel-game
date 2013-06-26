@@ -11,6 +11,11 @@ package
 		private var platform3:FlxTileblock;*/
 		private var player:Player;
 		private var level:Level1;
+		private var enemy0:Enemy;
+		private var enemy1:Enemy;
+		private var enemy2:Enemy;
+		
+		public var counter:Number = -5;
 		
 		public function PlayState() 
 		{
@@ -20,9 +25,16 @@ package
 		{
 			level = new Level1;
 			player = new Player(4, 120);
+			enemy0 = new Enemy(170, 170);
+			enemy1 = new Enemy(300, 200);
+			enemy2 = new Enemy(600, 100);
 			
 			add(level);
 			add(player);
+			add(enemy0);
+			add(enemy1);
+			add(enemy2);
+
 			
 			//	Tell flixel how big our game world is
 			FlxG.worldBounds = new FlxRect(0, 0, level.width, level.height);
@@ -33,10 +45,7 @@ package
 			//	The camera will follow the player
 			FlxG.camera.follow(player, FlxCamera.STYLE_PLATFORMER);
 			
-<<<<<<< HEAD
-=======
-			
->>>>>>> Added gliding and music.  Use Shift to glide.
+
 			/*FlxG.bgColor = 0xff63b8ff;
 			
 			player = new Player(32, 200);
@@ -62,8 +71,7 @@ package
 			if (FlxG.keys.SPACE)
 				player.doAttack();
 			
-<<<<<<< HEAD
-=======
+
 			if (FlxG.keys.justPressed("SHIFT")) {
 				player.glide();
 			}
@@ -72,10 +80,24 @@ package
 				player.noGlide();
 			}
 			
->>>>>>> Added gliding and music.  Use Shift to glide.
 			super.update();
 			
 			FlxG.collide(player, level);
+			FlxG.collide(enemy0, level);
+			FlxG.collide(enemy1, level);
+			FlxG.collide(enemy2, level);
+			
+			//causes the enemies to move back and forth
+			counter += FlxG.elapsed;
+			if (counter >= 5)
+			{
+				// After 10 seconds has passed, the timer will reset.
+				counter = -5;
+			}
+			enemy0.velocity.x = counter * 5;
+			enemy1.velocity.x = counter * 10;
+			enemy2.velocity.x = counter * 7;
+			
 			
 			/*FlxG.collide(player, floor);
 			FlxG.collide(player, platform1);

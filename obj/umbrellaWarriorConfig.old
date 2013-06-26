@@ -16,11 +16,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-<<<<<<< HEAD
-      <value>'6/12/2013'</value>
-=======
-      <value>'6/23/2013'</value>
->>>>>>> Added gliding and music.  Use Shift to glide.
+      <value>'6/25/2013'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -36,20 +32,12 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-<<<<<<< HEAD
-      <path-element>C:\Users\Jane Threefoot\Desktop\gameProjects\umbrellaWarrior\src</path-element>
-=======
       <path-element>C:\Users\Xavier\Documents\GitHub\flixel-game\src</path-element>
->>>>>>> Added gliding and music.  Use Shift to glide.
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
   </compiler>
   <file-specs>
-<<<<<<< HEAD
-    <path-element>C:\Users\Jane Threefoot\Desktop\gameProjects\umbrellaWarrior\src\Main.as</path-element>
-=======
     <path-element>C:\Users\Xavier\Documents\GitHub\flixel-game\src\Main.as</path-element>
->>>>>>> Added gliding and music.  Use Shift to glide.
   </file-specs>
   <default-background-color>#FFFFFF</default-background-color>
   <default-frame-rate>30</default-frame-rate>
